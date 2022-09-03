@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:toters/Details.dart';
+import 'package:toters/Search.dart';
+import 'package:toters/butler.dart';
 import 'package:toters/homePage.dart';
+import 'package:toters/orders.dart';
 import 'package:toters/splash.dart';
-
+import 'package:toters/profile.dart';
 void main() {
   runApp(MaterialApp(home: splash(),debugShowCheckedModeBanner: false,));
 }

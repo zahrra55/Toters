@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:toters/homePage.dart';
 class detailPage extends StatefulWidget {
 
 final String img;
@@ -12,8 +13,13 @@ detailPage({
 });
   @override
   State<detailPage> createState() => _detailPageState();
-}
 
+}
+String item='';
+// bool checkValue = true;
+// bool c = true;
+// bool v = true;
+int n=0;
 class _detailPageState extends State<detailPage> {
   @override
   Widget build(BuildContext context) {
@@ -26,6 +32,51 @@ class _detailPageState extends State<detailPage> {
                 scrollDirection: Axis.vertical,
                 children: [
                   meal(widget.img, widget.Name,13,30,widget.Rate,'We serve most delicious selection of Iragi traditional food.'),
+                  Row(
+                    children: [
+                      SizedBox(width: 22,),
+                      Text('Wanna add something?',style: TextStyle(fontSize: 19),),
+                    ],
+                  ),
+                  RadioListTile(
+                      value: 'Zahraa',
+                      groupValue: item,
+                      title: Text('Maio'),
+                      onChanged: (val){
+                        setState(() {
+                          item='$val';
+                          print('zahraa');
+                        });
+                      }
+                  ),
+                  RadioListTile(
+                      value: 'dsqfrh',
+                      groupValue: item,
+                      title: Text('Catchap'),
+                      onChanged: (val){
+                        setState(() {
+                          item='$val';
+                          print('zahraa');
+                        });
+                      }
+                  ),
+                 SizedBox(height: 10,),
+                  // CheckboxListTile(value: checkValue, onChanged: (value) {
+                  //   setState(() {
+                  //     checkValue= value!;
+                  //   });
+                  // }),
+                  // CheckboxListTile(value: c, onChanged: (value) {
+                  //   setState(() {
+                  //     c= value!;
+                  //   });
+                  // }),
+                  // CheckboxListTile(value: v, onChanged: (value) {
+                  //   setState(() {
+                  //     v= value!;
+                  //   });
+                  // }),
+                  SizedBox(height: 10,),
                  Row(children: [
                    SizedBox(width: 10,),
                    Text('Popular',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 21),)
@@ -108,7 +159,38 @@ class _detailPageState extends State<detailPage> {
             ],
           ),
           ),
-
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Color(0xFF1fad90),
+          items: [
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                  onTap: (){
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context)=>page1()));
+                  },
+                  child: Icon(Icons.home_filled)),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search_rounded),
+              label: 'Search',
+            ),
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                child: Image.asset('images/photo_2022-08-26_14-53-44.jpg',width: 27,height: 27,),
+              ),
+              label: 'bowtie',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.list_alt_rounded),
+              label: 'Order',
+            ),
+            BottomNavigationBarItem(
+              label: 'Account',
+              icon: Icon(Icons.person_outline),
+            ),
+          ]),
     );
   }
   Container meal(String photo, String name,int min,int max,double rate,String description) {
@@ -382,4 +464,5 @@ class _detailPageState extends State<detailPage> {
       ),
     );
   }
+
 }
