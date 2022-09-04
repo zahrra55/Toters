@@ -475,14 +475,13 @@ class _page1State extends State<page1> {
               label: 'butler',
             ),
             BottomNavigationBarItem(
-
               icon: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => orderPage()));
                 },
-                child:Icon(Icons.list_alt_rounded),),
-
+                child: Icon(Icons.list_alt_rounded),
+              ),
               label: 'Order',
             ),
             BottomNavigationBarItem(

@@ -30,8 +30,8 @@ class _searcherState extends State<searcher> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 10, left: 20,bottom: 10),
-                padding: EdgeInsets.only(top: 5,left: 5,right: 5),
+                margin: EdgeInsets.only(top: 10, left: 20, bottom: 10),
+                padding: EdgeInsets.only(top: 5, left: 5, right: 5),
                 width: 160,
                 height: 40,
                 decoration: BoxDecoration(
@@ -158,34 +158,81 @@ class _searcherState extends State<searcher> {
                 'Send Funds',
               ),
               set2(
-                Icon(Icons.percent,color: Colors.grey,size: 25,),
+                Icon(
+                  Icons.percent,
+                  color: Colors.grey,
+                  size: 25,
+                ),
                 'Credit',
-                Icon(Icons.add_card,color: Colors.grey,size: 24,),
+                Icon(
+                  Icons.add_card,
+                  color: Colors.grey,
+                  size: 24,
+                ),
                 'Add promo code',
               ),
-              set3( Icon(Icons.notifications_outlined,color: Colors.grey,size: 25,),
+              set3(
+                Icon(
+                  Icons.notifications_outlined,
+                  color: Colors.grey,
+                  size: 25,
+                ),
                 'Notifications',
-                Icon(Icons.location_on_outlined,color: Colors.grey,size: 24,),
+                Icon(
+                  Icons.location_on_outlined,
+                  color: Colors.grey,
+                  size: 24,
+                ),
                 'Addresses',
-                Icon(Icons.favorite_border_sharp,color: Colors.grey,size: 25,),
+                Icon(
+                  Icons.favorite_border_sharp,
+                  color: Colors.grey,
+                  size: 25,
+                ),
                 'Favorite',
-                Icon(Icons.room_preferences_outlined,color: Colors.grey,size: 24,),
+                Icon(
+                  Icons.room_preferences_outlined,
+                  color: Colors.grey,
+                  size: 24,
+                ),
                 'Preferences',
-                Icon(Icons.person_add_alt_1_outlined,color: Colors.grey,size: 24,),
+                Icon(
+                  Icons.person_add_alt_1_outlined,
+                  color: Colors.grey,
+                  size: 24,
+                ),
                 'Refer a friend',
               ),
-              set4( Icon(Icons.headset_mic_outlined,color: Colors.grey,size: 25,),
+              set4(
+                Icon(
+                  Icons.headset_mic_outlined,
+                  color: Colors.grey,
+                  size: 25,
+                ),
                 'Get support',
-                Icon(Icons.chat_outlined,color: Colors.grey,size: 24,),
+                Icon(
+                  Icons.chat_outlined,
+                  color: Colors.grey,
+                  size: 24,
+                ),
                 'support Tickets',
-                Icon(Icons.format_paint_outlined,color: Colors.grey,size: 25,),
+                Icon(
+                  Icons.format_paint_outlined,
+                  color: Colors.grey,
+                  size: 25,
+                ),
                 'Legal',
-                Icon(Icons.contact_support_outlined,color: Colors.grey,size: 24,),
+                Icon(
+                  Icons.contact_support_outlined,
+                  color: Colors.grey,
+                  size: 24,
+                ),
                 'FAQ',
               ),
               Center(
                 child: Container(
-                  margin: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
+                  margin:
+                      EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
                   padding: EdgeInsets.only(top: 10, left: 20, bottom: 10),
                   width: MediaQuery.of(context).size.width - 20,
                   height: 60,
@@ -199,13 +246,20 @@ class _searcherState extends State<searcher> {
                           color: Colors.grey.withOpacity(0.4),
                         )
                       ]),
-                  child:Row(
+                  child: Row(
                     children: [
-                      Icon(Icons.output_sharp,color: Colors.red,size: 23,),
+                      Icon(
+                        Icons.output_sharp,
+                        color: Colors.red,
+                        size: 23,
+                      ),
                       SizedBox(
                         width: 10,
                       ),
-                      Text('Sign Out',style: TextStyle(color: Colors.red,fontSize: 15),),
+                      Text(
+                        'Sign Out',
+                        style: TextStyle(color: Colors.red, fontSize: 15),
+                      ),
                     ],
                   ),
                 ),
@@ -251,14 +305,13 @@ class _searcherState extends State<searcher> {
               label: 'butler',
             ),
             BottomNavigationBarItem(
-
               icon: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => orderPage()));
                 },
-                child:Icon(Icons.list_alt_rounded),),
-
+                child: Icon(Icons.list_alt_rounded),
+              ),
               label: 'Order',
             ),
             BottomNavigationBarItem(
@@ -364,7 +417,10 @@ class _searcherState extends State<searcher> {
   Row maintitle(Icon icon, String title) {
     return Row(
       children: [
-        Text(title,style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15),),
+        Text(
+          title,
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+        ),
         SizedBox(
           width: 10,
         ),
@@ -401,11 +457,18 @@ class _searcherState extends State<searcher> {
         children: [
           Row(
             children: [
-              Text('Toters cash',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15),),
+              Text(
+                'Toters cash',
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+              ),
               SizedBox(
                 width: 10,
               ),
-              Icon(Icons.info_outline,color: Color(0xFF1fad90),size: 20,),
+              Icon(
+                Icons.info_outline,
+                color: Color(0xFF1fad90),
+                size: 20,
+              ),
             ],
           ),
           SizedBox(
@@ -420,15 +483,16 @@ class _searcherState extends State<searcher> {
       ),
     );
   }
+
   Container set2(
-      Icon i1,
-      String t1,
-      Icon i2,
-      String t2,
-      ) {
+    Icon i1,
+    String t1,
+    Icon i2,
+    String t2,
+  ) {
     return Container(
       margin: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
-      padding: EdgeInsets.only(top: 10, left: 10,right: 14),
+      padding: EdgeInsets.only(top: 10, left: 10, right: 14),
       width: MediaQuery.of(context).size.width - 20,
       height: 130,
       decoration: BoxDecoration(
@@ -447,7 +511,10 @@ class _searcherState extends State<searcher> {
           SizedBox(
             height: 10,
           ),
-          Text('Toters cash',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15),),
+          Text(
+            'Toters cash',
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+          ),
           SizedBox(
             height: 10,
           ),
@@ -455,7 +522,12 @@ class _searcherState extends State<searcher> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               set(i1, t1),
-              Text('IDQ 0',style: TextStyle(color: Color(0xFF1fad90),),)
+              Text(
+                'IDQ 0',
+                style: TextStyle(
+                  color: Color(0xFF1fad90),
+                ),
+              )
             ],
           ),
           line(),
@@ -464,21 +536,22 @@ class _searcherState extends State<searcher> {
       ),
     );
   }
+
   Container set3(
-      Icon i1,
-      String t1,
-      Icon i2,
-      String t2,
-      Icon i3,
-      String t3,
-      Icon i4,
-      String t4,
-      Icon i5,
-      String t5,
-      ) {
+    Icon i1,
+    String t1,
+    Icon i2,
+    String t2,
+    Icon i3,
+    String t3,
+    Icon i4,
+    String t4,
+    Icon i5,
+    String t5,
+  ) {
     return Container(
       margin: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
-      padding: EdgeInsets.only(top: 10, left: 10,right: 14),
+      padding: EdgeInsets.only(top: 10, left: 10, right: 14),
       width: MediaQuery.of(context).size.width - 20,
       height: 273,
       decoration: BoxDecoration(
@@ -497,7 +570,10 @@ class _searcherState extends State<searcher> {
           SizedBox(
             height: 10,
           ),
-          Text('Account details',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15),),
+          Text(
+            'Account details',
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+          ),
           SizedBox(
             height: 10,
           ),
@@ -514,19 +590,20 @@ class _searcherState extends State<searcher> {
       ),
     );
   }
+
   Container set4(
-      Icon i1,
-      String t1,
-      Icon i2,
-      String t2,
-      Icon i3,
-      String t3,
-      Icon i4,
-      String t4,
-      ) {
+    Icon i1,
+    String t1,
+    Icon i2,
+    String t2,
+    Icon i3,
+    String t3,
+    Icon i4,
+    String t4,
+  ) {
     return Container(
       margin: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
-      padding: EdgeInsets.only(top: 10, left: 10,right: 14),
+      padding: EdgeInsets.only(top: 10, left: 10, right: 14),
       width: MediaQuery.of(context).size.width - 20,
       height: 225,
       decoration: BoxDecoration(
@@ -545,7 +622,10 @@ class _searcherState extends State<searcher> {
           SizedBox(
             height: 10,
           ),
-          Text('Account details',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15),),
+          Text(
+            'Account details',
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+          ),
           SizedBox(
             height: 10,
           ),

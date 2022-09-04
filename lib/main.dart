@@ -6,9 +6,14 @@ import 'package:toters/homePage.dart';
 import 'package:toters/orders.dart';
 import 'package:toters/splash.dart';
 import 'package:toters/profile.dart';
+
 void main() {
-  runApp(MaterialApp(home: splash(),debugShowCheckedModeBanner: false,));
+  runApp(MaterialApp(
+    home: splash(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
+
 class toters extends StatefulWidget {
   const toters({Key? key}) : super(key: key);
 
