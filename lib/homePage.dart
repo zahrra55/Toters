@@ -190,15 +190,15 @@ class _page1State extends State<page1> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    FoodTypes('images/burger.jpg', 'meat'),
-                    FoodTypes('images/shopping.jpg', 'meat'),
+                    FoodTypes('images/burger.jpg', 'Food'),
+                    FoodTypes('images/shopping.jpg', 'Shops'),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    FoodTypes('images/delivery.jpg', 'meat'),
-                    FoodTypes('images/Wallet.jpg', 'meat'),
+                    FoodTypes('images/delivery.jpg', 'Bulter'),
+                    FoodTypes('images/Wallet.jpg', 'Wallet'),
                   ],
                 ),
                 Line(),

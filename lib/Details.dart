@@ -229,7 +229,7 @@ class _detailPageState extends State<detailPage> {
                   height: 27,
                 ),
               ),
-              label: 'bowtie',
+              label: 'Butler',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.list_alt_rounded),
