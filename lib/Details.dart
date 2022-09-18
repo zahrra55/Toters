@@ -233,7 +233,7 @@ class _detailPageState extends State<detailPage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.list_alt_rounded),
-              label: 'Order',
+              label: 'Orders',
             ),
             BottomNavigationBarItem(
               label: 'Account',
