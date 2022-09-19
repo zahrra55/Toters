@@ -61,7 +61,7 @@ class _detailPageState extends State<detailPage> {
                     onChanged: (val) {
                       setState(() {
                         item = '$val';
-                        print('Zahra');
+                        print('Zahraa');
                       });
                     }),
                 SizedBox(
